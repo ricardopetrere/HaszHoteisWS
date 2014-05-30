@@ -43,6 +43,12 @@ public class Client {
         DimTempo t = new DimTempo(ano, mes, null);
         DimHotel h = new DimHotel(IDHotel, "Hasz Alpha", hotelEstrelas, hotelQtdQuartos, e, c, null);
         FatosReserva f = new FatosReserva(h, e, t, "Adulto", "Fisico", c, qt, reservaValorTotal, reservaValorMax, reservaValorMin, reservaQtdCanceladas, reservaQtdDias, reservaQtd);
-        dw.enviarFato(f);
+        if(dw.enviarFato(f)==1){
+            //sucesso
+        }
+        else
+        {
+            //falha
+        }
     }
 }
